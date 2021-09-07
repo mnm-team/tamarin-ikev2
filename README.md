@@ -30,6 +30,6 @@ And point your browser to:
 
 ## Environment
 
-The code ran in an environment with 40 CPUs cores, 180 GB RAM and with standard Ubuntu. It took about 30 mins to complete.
+The code ran in an virtual environment with 40 vCPUs cores, 180 GB RAM and with standard Ubuntu. It took about 30 mins to complete.
 
 Smaller setups may also work.
