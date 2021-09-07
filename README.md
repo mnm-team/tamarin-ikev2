@@ -32,7 +32,7 @@ And point your browser to:
 
 The code ran in an virtual environment with 40 vCPU cores, 180 GB RAM and with standard Ubuntu. It took about 30 mins to complete.
 
-Smaller setups may also work.
+Smaller setups may work; the bottleneck is memory, not CPU power.
 
 ## Results (see .png-files)
 
