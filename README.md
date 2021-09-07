@@ -28,4 +28,5 @@ And point your browser to:
 ## Environment
 
 The code ran in an environment with 20vCPUs, 160 GB RAM and with standard Ubuntu and took about 30 mins to complete.
+
 Smaller setups may also work.
