@@ -20,7 +20,8 @@ More infos [here](https://tamarin-prover.github.io/manual/book/002_installation.
 Then run the model via the command line tool:
 
 	tamarin-prover interactive ikev2.spthy
-or
+or:
+
 	tamarin-prover interactive pq-ikev2.spthy
 
 And point your browser to:
