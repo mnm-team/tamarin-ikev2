@@ -33,3 +33,9 @@ And point your browser to:
 The code ran in an virtual environment with 40 vCPU cores, 180 GB RAM and with standard Ubuntu. It took about 30 mins to complete.
 
 Smaller setups may also work.
+
+## Results (see .png-files)
+
+As a result of running the code, Tamarin outputs a picture that shows the traces it can find to fulfill the code. When there is a trace that contains an attack (e.g., leaking a key), this can be spotted in the picture. 
+
+The .png-files in this repository are the results from running ikev2.spthy and pq-ikev2.spthy respectively. They show now attack possibilities but only a valid protocol run; this means, the impact of key leakage is accurately represented in the model.
