@@ -34,8 +34,8 @@ The code ran in an virtual environment with 40 vCPU cores, 180 GB RAM and with s
 
 Smaller setups may work; the bottleneck is memory, not CPU power.
 
-## Results (see .png-files)
+## Results
 
-As a result of running the code, Tamarin outputs a picture that shows the traces it can find to fulfill the code. When there is a trace that contains an attack (e.g., leaking a key), this can be spotted in the picture. 
-
-The .png-files in this repository are the results from running ikev2.spthy and pq-ikev2.spthy respectively. They show now attack possibilities but only a valid protocol run; this means, the impact of key leakage is accurately represented in the model.
+Depending on whether a lemma makes an "exists trace"-statement or an "all traces"-statements, different results are considered a success.
+To prove an "exists trace"-statement, Tamarin will output a trace (as a picture) which shows a fulfilling trace for the lemma.
+Tamarin succeeds at proving an "all traces"-statement if no trace can be found that contradicts the statement.
