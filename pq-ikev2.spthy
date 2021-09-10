@@ -313,7 +313,7 @@ lemma aliveness[use_induction]:
  */
     "All spi I R keymat #i .
         Completed(spi, I, 'initiator', R, keymat) @ #i
-//        & not (Ex #k . RevLtk(R) @ k)
+        & not (Ex #k . RevLtk(R) @ k)
     ==> (Ex spi2 peer role keymat2 #j . Completed(spi2, R, role, peer, keymat2) @ #j
         & #j < #i)"
 
