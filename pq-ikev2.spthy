@@ -333,11 +333,11 @@ lemma weak_agreement[use_induction]:
 
 lemma agreement[use_induction]:
 /* A protocol guarantees to an initiator I agreement with a responder R on a
- * set of zeug if, whenever I (acting as initiator) completes a run
+ * set S if, whenever I (acting as initiator) completes a run
  * of the protocol, apparently with responder R, then R has previously been
  * running the protocol, apparently with I, and R was acting as responder in his
  * run, and the two agents agreed on the data values corresponding to all the
- * variables in zeug, and each such run of I corresponds to a unique run of R.
+ * variables in S, and each such run of I corresponds to a unique run of R.
  */
     "All spi I R keymat #i .
         Completed(spi, I, 'initiator', R, keymat) @ #i
