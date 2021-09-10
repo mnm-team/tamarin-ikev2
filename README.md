@@ -34,8 +34,11 @@ Tamarin das not provide a package for Ubuntu/Debian by using apt/dpkg, hence we 
 
 #### Installing Hombrew
 If the package manager includes homebrew:
+
 	sudo apt install linuxbrew-wrapper
+	
 Otherwise manual installation is required (as it is currently the case in Ubuntu 20.04 LTS):
+
 	sudo apt install build-essential curl file git
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 	sudo brew install tamarin-prover/tap/tamarin-prover
@@ -43,16 +46,15 @@ Otherwise manual installation is required (as it is currently the case in Ubuntu
 	test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 	test -r ~/.bash_profile && echo eval" ($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 	echo "eval $($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-	sudo brew install tamarin-prover/tap/tamarin-prover
 	echo 'eval "$(/home/ubuntu/.linuxbrew/bin/brew shellenv)"' >> /home/ubuntu/.profile
 	eval "$(/home/ubuntu/.linuxbrew/bin/brew shellenv)"
-	brew install gcc
-
+	
 #### Installing Tamarin and its dependencies
+	brew install gcc
+	brew install font-util
 	brew install tamarin-prover/tap/tamarin-prover
 	brew install tamarin-prover/tap/maude graphviz haskell-stack
-   	brew install font-util
-	export PATH=$PATH:$HOME/.linuxbrew/var/homebrew/linked/tamarin-prover/bin
+   	export PATH=$PATH:$HOME/.linuxbrew/var/homebrew/linked/tamarin-prover/bin
 	tamarin-prover
 
 ## Environment
