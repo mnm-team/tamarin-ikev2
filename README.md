@@ -30,7 +30,7 @@ And point your browser to:
 
 ## Environment
 
-The code ran in an virtual environment with 40 vCPU cores, 180 GB RAM and with standard Ubuntu. It took about 30 mins to complete.
+The code ran in an virtual environment with 40 vCPU cores, 180 GB RAM and with standard Ubuntu 20.04. It took about 30 mins to complete.
 
 Smaller setups may work; the bottleneck is memory, not CPU power.
 
