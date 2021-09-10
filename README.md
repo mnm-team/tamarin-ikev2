@@ -1,7 +1,10 @@
 # IKEv2 Tamarin Model
 
 The [Tamarin](https://tamarin-prover.github.io/) prover is a verification tool
-for security protocols. This project contains a symbolic model of the Minimal IKEv2
+for security protocols. (Please also refer to the [Tamarin documentation](https://tamarin-prover.github.io/manual/tex/tamarin-manual.pdf) 
+). 
+
+This project contains a symbolic model of the Minimal IKEv2
 protocol which can be used with Tamarin to verify the key exchanges' claimed
 security properties.
 
@@ -76,7 +79,7 @@ In the other versions, "run" is interpreted as "completed"; in the "running-neq-
 
 ## Results
 
-To check the model, choose the correct file in the Tamarin GUI. In the tab that opens, the model code is on the left.
+To check the model, choose the correct file in the Tamarin GUI. In the tab that opens, the model code is on the left. 
 
 Click "sorry" at the foot of whichever lemma you want to prove. This opens the "Visualization display". All lemmas can be checked by clicking "a. autoprove".
 
