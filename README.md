@@ -9,7 +9,7 @@ protocol which can be used with Tamarin to verify the key exchanges' claimed
 security properties.
 
 There are two models:
-IKEv2 in a standard setting and "PQ-IKEv2" in a quantum setting, that means [Minimal IKEv2](https://datatracker.ietf.org/doc/html/rfc7815) with the [IKE_INTERMEDIATE-extension](https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-ikev2-intermediate-03) and with an attacker who can break the Diffie-Hellman keys derived in the standard handshake.
+IKEv2 in a standard setting and "PQ-IKEv2" in a quantum setting, that means: [Minimal IKEv2](https://datatracker.ietf.org/doc/html/rfc7815) with the [IKE_INTERMEDIATE-extension](https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-ikev2-intermediate-03) and an attacker who can break the Diffie-Hellman keys derived in the standard handshake.
 
 ## How do I run this?
 
@@ -68,14 +68,14 @@ Smaller setups may work; the bottleneck is memory, not CPU power.
 
 ## Versions of the model
 
-We model both standard IKEv2 and "PQ-IKEv2". PQ-IKEv2 here means IKEv2 with IKE-Intermediate in a model, where the attacker can break classical DH-keys.
+We model both standard IKEv2 and "PQ-IKEv2". PQ-IKEv2 here means IKEv2 with IKE-Intermediate in a model where the attacker can break classical DH-keys.
 
 The files that relate to the second kind have the prefix "pq-".
 
-The "full model" versions contain models that consider the aliveness-, weak-agreement- and agreement-property not only from the initiator's point of view (as do the models in [ikev2.spthy](https://github.com/mnm-team/tamarin-ikev2/blob/master/ikev2.spthy) and in [pq-ikev2.spthy](https://github.com/mnm-team/tamarin-ikev2/blob/master/pq-ikev2.spthy)).
+The "full model" versions contain models that consider the aliveness-, weak-agreement- and agreement-property not only from the initiator's point of view (as the models in [ikev2.spthy](https://github.com/mnm-team/tamarin-ikev2/blob/master/ikev2.spthy) and in [pq-ikev2.spthy](https://github.com/mnm-team/tamarin-ikev2/blob/master/pq-ikev2.spthy) do) but also from the responder's perspective.
 
-We provide the "running-neq-completed" versions to account for the ambiguity in the definition of aliveness, weak agreement and agreement, which require one of the parties to have "completed" the protocol and the other to have "run" the protocol. 
-In the other versions, "run" is interpreted as "completed"; in the "running-neq-completed" versions, the properties are defined in such a way that aliveness and weak agreement only require the second party to reach any step of the protocol, not to complete it.
+We provide the "running-neq-completed" versions to account for the ambiguity in the definitions of aliveness, weak agreement and agreement, which require one of the parties to have "completed" the protocol and the other to have "run" the protocol. 
+In the other versions, "run" is interpreted as "completed"; in the "running-neq-completed" versions, the properties are defined in such a way that aliveness and weak agreement only require the second party to reach any arbitrary step of the protocol, not to complete it.
 
 ## Results
 
@@ -85,7 +85,7 @@ Click "sorry" at the foot of whichever lemma you want to prove. This opens the "
 
 Depending on whether a lemma makes an "exists trace"-statement or an "all traces"-statements, different results are considered a success.
 To prove an "exists trace"-statement, Tamarin will output a trace (as a picture) which shows a fulfilling trace for the lemma.
-Tamarin succeeds at proving an "all traces"-statement if no trace can be found that contradicts the statement.
+Proving an "all traces"-statement means that Tamarin finds no trace that contradicts the statement.
 
 Lemmas that can be proven yield a green trace on the left and, in the case of "exists-trace"-lemmas, a picture of a fulfilling trace.
 Lemmas that can be disproven yield a red trace on the left and, in the case of "all-traces"-lemmas, a picture of a contradicting trace.
